@@ -1,0 +1,1 @@
+const C='reactiva-v2',F=['dcpro0.html','dcpro1.webmanifest','dcpro3.png','dcpro4.png'];self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(F))));self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>caches.match(e.request))));
